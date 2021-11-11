@@ -1,54 +1,61 @@
 //physical layer 
 //noise addition 
 //code multiply with data 
-if (!buffer_tr.isEmpty()){
+color = green;
+
+//if (!buffer_tr.isEmpty()){
 receivedmsg=msg;
 nbrelayers=0;
 String[] message = receivedmsg.split(";");
 lastsender=message[1];
 
-int N = 10000;
+//int N = 10000;
 int [] rx = new int [N]; 
 if(message[0].equals("code"))
-	{
-	 for (int k = 0; k < message.length; k++) 
+	{System.out.println("reception @ rx: "+id+";"+time(SECOND));
+	 for (int k = 1; k < message.length-1; k++) //ignore the first msg[0] code
 		{    
 			rx[k] = Integer.valueOf(message[k]);
+			//System.out.println("rx: "+rx[k]);
     	}
-	}
+	
 //add channel effect and noise
 
 double [] channel_real = new double [N];
 
 double [] channel_imag = new double [N];
 
-for (int k = 0; k <message.length; k++)
+for (int k = 0; k <message.length-1; k++)
 	{
-	    channel_real[k]= Math.floor(Math.random() * 5);;   // the real part
-		channel_imag[k] = Math.floor(Math.random() * 5);;   // the imaginary part 	    
+	    channel_real[k]= (Math.random() * 5);;   // the real part
+		
+		channel_imag[k] = (Math.random() * 5);;   // the imaginary part 	    
 	}   
-	
+
 double [] rxf_real = new double [N];
 double [] rxf_imag = new double [N];
+
 //adding channel fading effect on the transmitted signal	
-for (int k = 0; k <rx.length; k++)
+for (int k = 0; k <rx.length-1; k++)
 	{
 		rxf_real[k] = channel_real[k]*rx[k];
+			
 		rxf_imag[k] = channel_imag[k]*rx[k];
 	}
+	
 // noise  
 double [] noise_real = new double [N];
 double [] noise_imag = new double [N];
 
-for (int k = 0; k <message.length; k++)
+for (int k = 0; k <message.length-1; k++)
 	{
-	    noise_real[k]= Math.floor(Math.random() * 5);;   // the real part
-		noise_imag[k] = Math.floor(Math.random() * 5);;   // the imaginary part 	    
+	    noise_real[k]= (Math.random() * 5);;   // the real part
+		noise_imag[k] = (Math.random() * 5);;   // the imaginary part 	    
 	}   
 	
 double [] y_real = new double [N];
 double [] y_imag = new double [N];
-for (int k = 0; k <message.length; k++)
+for (int k = 0; k <message.length-1; k++)
 	{
 		y_real[k] = rxf_real[k]+noise_real[k];
 		y_imag[k] = rxf_imag[k]+noise_imag[k];
@@ -58,7 +65,8 @@ for (int k = 0; k <message.length; k++)
 double [] eq_real = new double [N];
 double [] eq_imag = new double [N];
 double [] eq_abs  = new double [N];
-for (int j = 0; j <message.length; j++)
+
+for (int j = 0; j <message.length-1; j++)
 	{
 		eq_real[j] = y_real[j]/channel_real[j];
 		eq_imag[j] = y_imag[j]/channel_imag[j];
@@ -67,8 +75,8 @@ for (int j = 0; j <message.length; j++)
 		eq_abs[j]  = Math.pow(term1+term2,0.5);
 	}	
 //checking and estimating the received value as bit 0 or bit 1
-double [] est_bit  = {};
-for (int h = 0; h <message.length; h++)
+int [] est_bit  = new int [N];
+for (int h = 0; h <message.length-1; h++)
 	{
 		if (eq_abs[h]>0)
 			{
@@ -82,17 +90,25 @@ for (int h = 0; h <message.length; h++)
 
 //measure total bit error
 int diff =0;
-for (int h = 0; h <message.length; h++)
+for (int h = 0; h <message.length-1; h++)
 	{
-		if(est_bit[h]!=Double.valueOf(message[h]))
+		//if(est_bit[h]!=Double.valueOf(message[h+1]))
+		//System.out.println("est rx: "+abs(est_bit[h]-rx[h]));
+		if(abs(est_bit[h]-rx[h])==0.0)
 			{
+				
 				diff = 1+diff;
+				//System.out.println("diff: "+diff);
 			}
 	}
-	
+//System.out.println("diff: "+diff+";"+(message.length-1));	
 //ber calculation
-double ber = diff/message.length; 	
 
+float ber = (float) diff/(message.length-1); 	
+String strDouble = String.format("%.4f", ber );
+System.out.println("ber: "+strDouble);
+Done = true;
+}
 //if an emergency call is received : energy counter
 if(message[0].equals("emergency")) 	
 	{    
@@ -151,4 +167,4 @@ for(int k=0;k<buffer_nbrelayers.size();k++)
 				alreadyrelayed.add("emergency"+";"+ arrayKeys[k]+";"+buffer_msgid.get(arrayKeys[k]) +";"+buffer_rssi.get(arrayKeys[k]));	
 			}
 	}
-	}
+	//}

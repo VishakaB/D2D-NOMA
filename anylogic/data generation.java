@@ -1,11 +1,14 @@
-System.out.println("4: ");
+//System.out.println("4: ");
+
 	{
+		color=red;
 		//physical layer 
 		//Generation of Walsh codes
 		boolean[][] walsh=hadamard(4); 
 		boolean [] code1 =new boolean [4];
 		boolean [] code2 =new boolean [4];
 		boolean [] code3 =new boolean [4];
+		
         if(thisid==110)
         	{
         		code1= walsh[0];//Taking 2nd row of walsh code for User1
@@ -20,7 +23,7 @@ System.out.println("4: ");
         	}
            
         //data generation
-        int N = 10000;
+        //int N = 10000;
         
         boolean [] userdata =  data_generator(N); //generate data sequence
         int [] muserdata = new int [N]; //initalize modulated data sequence
@@ -44,8 +47,9 @@ System.out.println("4: ");
         int [] cuserdata =  new int [N];   
     	for (int i = 0; i < 4; i++) 
     		{    if(code1[i]==true)
-	    			{     
+	    			{     		        	 	
 		        	 	cuserdata[i] = muserdata[i] * 1;  
+		        	 	//System.out.println("code1: "+cuserdata[i] );
 		        	 }    
 		         else
 			         {
@@ -80,11 +84,13 @@ System.out.println("4: ");
 				alreadyCalled.add(id);
 			  	sendToAllConnected("emergency" + ";"+ String.valueOf(id)+";"+String.valueOf(msgid) +";"+ String.valueOf(rssiWatts_max)+";"+String.valueOf(id));//sending 
 			  	y_st = "code";
-			  	for (int i = 0; i < cuserdata.length; i++) 
+			  	//System.out.println("5: ");
+			  	for (int i = 0; i < muserdata.length; i++) 
 		    		{    
-		    			y_st += ";"+String.valueOf(cuserdata[i]);
+		    			y_st += ";"+(muserdata[i]);
+		    			
 			    	}
-			    
+			    System.out.println("transfer by txid: "+id);
 			  	sendToAllConnected(y_st);
 			}								
 		main.energy_source_relay_main += transmitE;	//energy consumption
