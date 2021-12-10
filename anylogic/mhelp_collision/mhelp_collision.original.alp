@@ -384,28 +384,13 @@
 				<Variable Class="PlainVariable">
 					<Id>1637652822691</Id>
 					<Name><![CDATA[nbcollisions]]></Name>
-					<X>620</X><Y>-250</Y>
+					<X>290</X><Y>-130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[int]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1638262508725</Id>
-					<Name><![CDATA[rownumber]]></Name>
-					<X>620</X><Y>-280</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[int]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[1]]></Code>
-						</InitialValue>
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
@@ -518,7 +503,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[500]]></Code>
+							<Code><![CDATA[1000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1611406082135</Id>
@@ -1105,7 +1090,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1637652809843</Id>
 					<Name><![CDATA[collision]]></Name>
-					<X>620</X><Y>-180</Y>
+					<X>180</X><Y>-130</Y>
 					<Label><X>20</X><Y>-5</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1120,7 +1105,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1637764477582</Id>
 					<Name><![CDATA[reception]]></Name>
-					<X>620</X><Y>-150</Y>
+					<X>430</X><Y>-130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1129,36 +1114,6 @@
 						<CollectionClass><![CDATA[LinkedHashMap]]></CollectionClass>
 						<ElementClass><![CDATA[String]]></ElementClass>
 						<ValueElementClass><![CDATA[Integer]]></ValueElementClass>
-					</Properties>
-
-				</Variable>
-				<Variable Class="CollectionVariable">
-					<Id>1638182084455</Id>
-					<Name><![CDATA[phoneids]]></Name>
-					<X>620</X><Y>-210</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
-						<CollectionClass><![CDATA[LinkedHashMap]]></CollectionClass>
-						<ElementClass><![CDATA[Integer]]></ElementClass>
-						<ValueElementClass><![CDATA[Integer]]></ValueElementClass>
-					</Properties>
-
-				</Variable>
-				<Variable Class="CollectionVariable">
-					<Id>1638273600432</Id>
-					<Name><![CDATA[s_codes]]></Name>
-					<X>620</X><Y>-120</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
-						<CollectionClass><![CDATA[LinkedHashMap]]></CollectionClass>
-						<ElementClass><![CDATA[Integer]]></ElementClass>
-						<ValueElementClass><![CDATA[String]]></ValueElementClass>
 					</Properties>
 
 				</Variable>
@@ -1557,24 +1512,6 @@
 					<SamplesToKeep>10000</SamplesToKeep>
 				</DataSet>
 			</AnalysisData>
-			<Connectivity>
-				<ExcelFile>
-					<Id>1638262393551</Id>
-					<Name><![CDATA[excelFile]]></Name>
-					<X>490</X><Y>-210</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ResourceReference>
-						<PackageName><![CDATA[am_help_with_buffer_tr]]></PackageName>
-						<ClassName><![CDATA[per.xlsx]]></ClassName>
-					</ResourceReference>
-					<SaveInSnapshot>false</SaveInSnapshot>
-					<LoadOnStartup>true</LoadOnStartup>
-					<SaveOnDispose>true</SaveOnDispose>
-				</ExcelFile>
-			</Connectivity>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1611404922979</Id>
@@ -1641,15 +1578,6 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[n0_th]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locx]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[scode1]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
@@ -1851,118 +1779,6 @@
 					<Z>0</Z>
 					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
 
-			<Presentation>
-				<Rectangle>
-					<Id>1638269723525</Id>
-					<Name><![CDATA[s1]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>450</Width>
-					<Height>300</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1644806</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
-				<Rectangle>
-					<Id>1638269729405</Id>
-					<Name><![CDATA[s3]]></Name>
-					<X>0</X><Y>300</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>450</Width>
-					<Height>300</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-16744320</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
-				<Rectangle>
-					<Id>1638269733250</Id>
-					<Name><![CDATA[s2]]></Name>
-					<X>450</X><Y>0</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>400</Width>
-					<Height>300</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-16</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
-				<Rectangle>
-					<Id>1638269756301</Id>
-					<Name><![CDATA[s4]]></Name>
-					<X>450</X><Y>300</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>400</Width>
-					<Height>300</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1296</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
-				<Rectangle>
-					<Id>1638269884823</Id>
-					<Name><![CDATA[s5]]></Name>
-					<X>0</X><Y>600</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>850</Width>
-					<Height>400</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-983056</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
-			</Presentation>
 
 				</Level>
 				<EmbeddedObjectPresentation>
@@ -2719,18 +2535,6 @@
 						<Type><![CDATA[boolean]]></Type>        
 					</Properties>
 				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1638198484353</Id>
-					<Name><![CDATA[nbinterfering_ues]]></Name>
-					<X>240</X><Y>770</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[int]]></Type>        
-					</Properties>
-				</Variable>
 				<Variable Class="Parameter">
 					<Id>1611405944421</Id>
 					<Name><![CDATA[T_initial]]></Name>
@@ -2891,75 +2695,6 @@
 						<SdArray>false</SdArray>
 						<ParameterEditor>
 							<Id>1611405944437</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1638181238043</Id>
-					<Name><![CDATA[locx]]></Name>
-					<X>30</X><Y>90</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[Location_phoneX]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1638181238041</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1638181247127</Id>
-					<Name><![CDATA[locy]]></Name>
-					<X>30</X><Y>120</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[Location_phoneY]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1638181247125</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1638346613187</Id>
-					<Name><![CDATA[scode1]]></Name>
-					<X>580</X><Y>40</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[String]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<ParameterEditor>
-							<Id>1638346613185</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -3241,7 +2976,7 @@
 					<Properties Width="137.281" Height="38.968">
 						<EntryAction><![CDATA[nbTrails=0;
 color=blue;]]></EntryAction>
-						<FillColor>-5247250</FillColor>
+						<FillColor>-1644806</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -3253,7 +2988,7 @@ color=blue;]]></EntryAction>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="166.839" Height="38.968">
-						<FillColor>-32</FillColor>
+						<FillColor>-2031617</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -3266,7 +3001,7 @@ color=blue;]]></EntryAction>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="166.839" Height="38.968">
 						<EntryAction><![CDATA[relayCall();]]></EntryAction>
-						<FillColor>-6632142</FillColor>
+						<FillColor>-983056</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -3280,7 +3015,7 @@ color=blue;]]></EntryAction>
 					<Properties Width="166.839" Height="38.968">
 						<ExitAction><![CDATA[
 ]]></ExitAction>
-						<FillColor>-32</FillColor>
+						<FillColor>-2031617</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -3296,7 +3031,7 @@ color=blue;]]></EntryAction>
 	{
 		if(time()<main.timeInterval)emergCall();
 	}]]></EntryAction>
-						<FillColor>-744352</FillColor>
+						<FillColor>-8531</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -3308,7 +3043,7 @@ color=blue;]]></EntryAction>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="114.153" Height="38.968">
-						<FillColor>-32</FillColor>
+						<FillColor>-2031617</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="FinalState" ParentState="ROOT_NODE">
@@ -3366,13 +3101,7 @@ for(int i=0;i<getConnectionsNumber();i++)
 	 				} 
 	 		}			 
 	 	}
-int t = main.phoneids.size();//before adding this id the size	 
-	
-main.phoneids.put(this.id,t);
-//assign the scrambling code to this device based on the tile it belongs to 
-scrambling_code(Location_phoneX,Location_phoneY);
-//System.out.println("t id"+";"+t+";"+main.phoneids.get(this.id));
-//System.out.println("scrambling codes"+";"+main.s_codes);//second reception ]]></Action>
+]]></Action>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
@@ -3805,94 +3534,38 @@ if(message[0].equals("emergency") && message[1].equals(String.valueOf(id)))
 nbrelayers=0;
 String[] message = receivedmsg.split(";");
 lastsender=message[1];
-
-double sumInterferencePower = 0;
-double receivedSignalPower = 0;
-int no_interfering_ues = 0;
-
 if(message[0].equals("emergency")&&!alreadyrelayed.contains("emergency"+";"+ message[1]+";"+message[2] +";"+message[3])) 	
 	{    
 	    waitingTime=min(120,(1-ic)*(1/(locAccuracy+0.1))*(100/min(energyLevel,100)));
 	}
-	
-//number of  messages received during same time slot 	
-String h = this.id+";"+time(SECOND);
-if (main.reception.get(h)==null){scode1 ="";}
-System.out.println("scode1 check"+main.reception.get(h));
+String h = this.id+";"+time(SECOND)+";"+message[1];
 if (main.reception.get(h)==null)
 	{
 		main.reception.put(h,1);//first reception
-		receivedSignalPower=rxsignalPower(lastsender);
-		scode1 = main.s_codes.get(this.id);
 	}
-else if(main.reception.get(h)>0 && main.s_codes.get(this.id)==scode1)//also check whether the scrambling signature is different
+else if(main.reception.get(h)>0)
 	{
-		System.out.println("scode1"+";"+scode1);
-		no_interfering_ues++;
+		main.nbcollisions++;
 		
 		double t = 0.000067*main.nbcollisions;
 
 		main.reception.put(h,1+main.reception.get(h));
 		System.out.println("collision"+";"+main.reception.get(h)+";"+t);//second reception
-		sumInterferencePower = rxsignalPower(lastsender)+sumInterferencePower;
 	}
-else if(main.reception.get(h)>1)
-	{
-		System.out.println("collision"+";"+main.reception.get(h));//second reception
-	}
-System.out.println("scode1"+";"+scode1+";"+ main.s_codes.get(this.id)+";"+main.reception.get(h));
-//probability that multiple transmitters selecting the same RB// resource  
-//number of resource blocks is 15
-//number of users in the connection range
-List<Agent> neighbors=getConnections();
-int nues = neighbors.size();
-int nbrbs = 150;
 
-//probability
-double log_factorial_numberResources = gammaLog(nbrbs+1);//because log gamma function gives the log of factorial: (151-1)! 
-double factorial_numberResources = Math.pow(2.718,log_factorial_numberResources);// e to the power of the log of factorial	
-double log_factorial_nues = gammaLog(nues);
-double factorial_nues =  Math.pow(2.718,log_factorial_nues);
-double log_diff_factorial =  gammaLog(nbrbs+1-nues);
-double diff_factorial =  Math.pow(2.718,log_diff_factorial);
-
-//prob collision in resource selection // to find the number of interfering devices
-double y = (factorial_numberResources)/(diff_factorial*Math.pow(nbrbs,nues)); 
-double prob_same_resource = 1 - y; 
-//System.out.println("factorial fraction"+";"+factorial_numberResources+";"+diff_factorial+";"+Math.pow(15,nues)+";"+y);//second reception
-
-//System.out.println("prob_same_resource"+";"+no_interfering_ues);//second reception 
-//total number of resource blocks available in 3 mhz bandwidth // 150
-double noisePower =  Math.pow(10,(-30)/10);//over the entire bandwidth//in watts //0 dbm noise
-//number of rbs used by this device 
-//databits(10000/2)/(14 symbols*1 time slots) = number of rbs = 358
-//interference from other users 
-
-//calculating the SINR
-//snr compute for  each received msg 
+//snr compute for  eachh received msg 
 //threshhold snr 
-//integral part
-double N = Math.pow(10,4); 
-double inverfc = erfcInv(2/N);
-double k = 2;
-double snr_th = 2/k*Math.pow(inverfc,2);
-snr_th = Math.pow(10,(-200)/10);
-//number of connected users to the same frequency and same scrambling code 
-double snr_avg =  receivedSignalPower/(sumInterferencePower+noisePower);//in watts
-
+double receivedPower = 1 ;
+double noisePower = 0;
+double sumInterferencePower = 0.5;
+double snr_avg =  receivedPower/(sumInterferencePower+noisePower);
+//snr
+double snr_th = 1.0;
+//double snr_avg = 1.3;
 //packet error rate fo each received msg
-double ratio = (-Math.pow(10,-22))*snr_th/snr_avg;
-//ratio = -Math.pow(10,(20+30-30)/10)/snr_avg;
-ratio = -snr_th/snr_avg;
+double ratio = -snr_th/snr_avg;
 //ref: paper v2x static pervs snr 
-double per = 1-expon(ratio);
-
-if(per>0)
-	{
-		//System.out.println("packet error rate"+";"+per+";"+ratio+";"+snr_avg);//second reception 
-		write_per(main.rownumber,per);
-		main.rownumber++;
-	}]]></Action>
+double per = 1- expon(ratio);]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -3958,7 +3631,7 @@ if(message[0].equals("emergency") && message[1].equals(lastsender))
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-60</X><Y>-83</Y></Point>
+						<Point><X>-40</X><Y>-83</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1611477531234" Target="1611477531226" Trigger="condition">
@@ -3967,7 +3640,7 @@ if(message[0].equals("emergency") && message[1].equals(lastsender))
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[//collision or lost packet..receiving two packets within the same time slot1
-1==1 // avoid going into the relaying state]]></Condition>
+1==1]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -4013,7 +3686,7 @@ if(message[0].equals("emergency") && message[1].equals(lastsender))
 				alreadyCalled.add(id);
 			    
 			    //sending
-			  	sendToAllConnected("emergency" + ";"+ String.valueOf(id)+";"+String.valueOf(msgid) +";"+ String.valueOf(rssiWatts_max));//add the scrmabling code here       
+			  	sendToAllConnected("emergency" + ";"+ String.valueOf(id)+";"+String.valueOf(msgid) +";"+ String.valueOf(rssiWatts_max));          
 												
 				//energy consumption
 				main.energy_source_relay_main += transmitE;
@@ -4075,7 +3748,7 @@ else if (inCoverage)
 				    TotalDistance = Math.pow(Math.pow(main.gNBs.get(mygNB).locx - main.EmergCallLocx.get(message[1]),2) + Math.pow(main.gNBs.get(mygNB).locy - main.EmergCallLocy.get(message[1]),2),0.5); 
 				    latencyPerDistance =  latency/distanceFromBS;  
 				    main.avgLatency_distance += latencyPerDistance;
-			
+				    //main.energy_source_relay_main += transmitE;
 					main.reachedCore.put(message[1],true);
 				}        		   
 		
@@ -4164,7 +3837,7 @@ return (i);]]></Body>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1638099027124</Id>
 					<Name><![CDATA[expon]]></Name>
-					<X>500</X><Y>510</Y>
+					<X>80</X><Y>500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4174,258 +3847,6 @@ return (i);]]></Body>
 						<Type><![CDATA[double]]></Type>
 					</Parameter>
 					<Body><![CDATA[return Math.pow(2.718, n);]]></Body>
-				</Function>
-				<Function AccessType="default" StaticFunction="false">
-					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
-					<ReturnType><![CDATA[double]]></ReturnType>
-					<Id>1638179883349</Id>
-					<Name><![CDATA[erfInv]]></Name>
-					<X>500</X><Y>540</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Parameter>
-						<Name><![CDATA[x]]></Name>
-						<Type><![CDATA[double]]></Type>
-					</Parameter>
-					<Body><![CDATA[//ref:https://alvinalexander.com/java/jwarehouse/commons-math3-3.6.1/src/main/java/org/apache/commons/math3/special/Erf.java.shtml
-
-	// beware that the logarithm argument must be
-	// commputed as (1.0 - x) * (1.0 + x),
-	// it must NOT be simplified as 1.0 - x * x as this
-	// would induce rounding errors near the boundaries +/-1
-
-	double w = - Math.log((1.0 - x) * (1.0 + x));
-	double p;
-	
-	if (w < 6.25) {
-	    w -= 3.125;
-	    p =  -3.6444120640178196996e-21;
-	    p =   -1.685059138182016589e-19 + p * w;
-	    p =   1.2858480715256400167e-18 + p * w;
-	    p =    1.115787767802518096e-17 + p * w;
-	    p =   -1.333171662854620906e-16 + p * w;
-	    p =   2.0972767875968561637e-17 + p * w;
-	    p =   6.6376381343583238325e-15 + p * w;
-	    p =  -4.0545662729752068639e-14 + p * w;
-	    p =  -8.1519341976054721522e-14 + p * w;
-	    p =   2.6335093153082322977e-12 + p * w;
-	    p =  -1.2975133253453532498e-11 + p * w;
-	    p =  -5.4154120542946279317e-11 + p * w;
-	    p =    1.051212273321532285e-09 + p * w;
-	    p =  -4.1126339803469836976e-09 + p * w;
-	    p =  -2.9070369957882005086e-08 + p * w;
-	    p =   4.2347877827932403518e-07 + p * w;
-	    p =  -1.3654692000834678645e-06 + p * w;
-	    p =  -1.3882523362786468719e-05 + p * w;
-	    p =    0.0001867342080340571352 + p * w;
-	    p =  -0.00074070253416626697512 + p * w;
-	    p =   -0.0060336708714301490533 + p * w;
-	    p =      0.24015818242558961693 + p * w;
-	    p =       1.6536545626831027356 + p * w;
-	} else if (w < 16.0) {
-	    w = Math.sqrt(w) - 3.25;
-	    p =   2.2137376921775787049e-09;
-	    p =   9.0756561938885390979e-08 + p * w;
-	    p =  -2.7517406297064545428e-07 + p * w;
-	    p =   1.8239629214389227755e-08 + p * w;
-	    p =   1.5027403968909827627e-06 + p * w;
-	    p =   -4.013867526981545969e-06 + p * w;
-	    p =   2.9234449089955446044e-06 + p * w;
-	    p =   1.2475304481671778723e-05 + p * w;
-	    p =  -4.7318229009055733981e-05 + p * w;
-	    p =   6.8284851459573175448e-05 + p * w;
-	    p =   2.4031110387097893999e-05 + p * w;
-	    p =   -0.0003550375203628474796 + p * w;
-	    p =   0.00095328937973738049703 + p * w;
-	    p =   -0.0016882755560235047313 + p * w;
-	    p =    0.0024914420961078508066 + p * w;
-	    p =   -0.0037512085075692412107 + p * w;
-	    p =     0.005370914553590063617 + p * w;
-	    p =       1.0052589676941592334 + p * w;
-	    p =       3.0838856104922207635 + p * w;
-	} else if (!Double.isInfinite(w)) {
-	    w = Math.sqrt(w) - 5.0;
-	    p =  -2.7109920616438573243e-11;
-	    p =  -2.5556418169965252055e-10 + p * w;
-	    p =   1.5076572693500548083e-09 + p * w;
-	    p =  -3.7894654401267369937e-09 + p * w;
-	    p =   7.6157012080783393804e-09 + p * w;
-	    p =  -1.4960026627149240478e-08 + p * w;
-	    p =   2.9147953450901080826e-08 + p * w;
-	    p =  -6.7711997758452339498e-08 + p * w;
-	    p =   2.2900482228026654717e-07 + p * w;
-	    p =  -9.9298272942317002539e-07 + p * w;
-	    p =   4.5260625972231537039e-06 + p * w;
-	    p =  -1.9681778105531670567e-05 + p * w;
-	    p =   7.5995277030017761139e-05 + p * w;
-	    p =  -0.00021503011930044477347 + p * w;
-	    p =  -0.00013871931833623122026 + p * w;
-	    p =       1.0103004648645343977 + p * w;
-	    p =       4.8499064014085844221 + p * w;
-	} else {
-	    // this branch does not appears in the original code, it
-	    // was added because the previous branch does not handle
-	    // x = +/-1 correctly. In this case, w is positive infinity
-	    // and as the first coefficient (-2.71e-11) is negative.
-	    // Once the first multiplication is done, p becomes negative
-	    // infinity and remains so throughout the polynomial evaluation.
-	    // So the branch above incorrectly returns negative infinity
-	    // instead of the correct positive infinity.
-	    p = Double.POSITIVE_INFINITY;
-	}
-
-        return p * x;]]></Body>
-				</Function>
-				<Function AccessType="default" StaticFunction="false">
-					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
-					<ReturnType><![CDATA[double]]></ReturnType>
-					<Id>1638179998957</Id>
-					<Name><![CDATA[erfcInv]]></Name>
-					<X>500</X><Y>570</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Parameter>
-						<Name><![CDATA[x]]></Name>
-						<Type><![CDATA[double]]></Type>
-					</Parameter>
-					<Body><![CDATA[//ref:https://alvinalexander.com/java/jwarehouse/commons-math3-3.6.1/src/main/java/org/apache/commons/math3/special/Erf.java.shtml
-return erfInv(1 - x);]]></Body>
-				</Function>
-				<Function AccessType="default" StaticFunction="false">
-					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
-					<ReturnType><![CDATA[double]]></ReturnType>
-					<Id>1638200635727</Id>
-					<Name><![CDATA[rxsignalPower]]></Name>
-					<X>440</X><Y>100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Parameter>
-						<Name><![CDATA[txid]]></Name>
-						<Type><![CDATA[String]]></Type>
-					</Parameter>
-					<Body><![CDATA[//received signal power
-//transmitter power - pathloss based on distance 
-int phoneindex = main.phoneids.get(Integer.valueOf(txid));//chosen phone index
-double u = main.phones.get(phoneindex).Location_phoneX;
-double v = main.phones.get(phoneindex).Location_phoneY;
-//System.out.println("phoneindex"+";"+phoneindex+";"+u);
-double distanceFromTx = Math.pow(Math.pow(u - Location_phoneX,2) + Math. pow(v - Location_phoneY,2),0.5);
-	     
-//3 mhz band is used
-//pathloss value
-cost231_pathloss_dbm = 46.3+33.9*Math.log10(3)-13.82*Math.log10(2)-2.69+(44.9-6.55*Math.log10(3))*Math.log10(distanceFromTx)+0;
-rssidBm = 20 - cost231_pathloss_dbm;//ref: https://wlan1nde.wordpress.com/2014/11/26/wlan-maximum-transmission-power-etsi/
-rssidBm_watts = Math.pow(10,(rssidBm-30)/10);
-
-double receivedSignalPower=0;
-if(rssidBm_watts<0)
-	{
-		System.out.println("rssi negative");//second reception
-	}
-else
-	{
-		double lowrssidBm_watts = Math.pow(10,(-200)/10);
-		receivedSignalPower = rssidBm_watts;
-		//System.out.println("receivedSignalPower:"+receivedSignalPower+";"+lowrssidBm_watts);//second reception	
-	}
-return receivedSignalPower;]]></Body>
-				</Function>
-				<Function AccessType="default" StaticFunction="false">
-					<ReturnModificator>VOID</ReturnModificator>
-					<ReturnType><![CDATA[double]]></ReturnType>
-					<Id>1638262354690</Id>
-					<Name><![CDATA[write_per]]></Name>
-					<X>440</X><Y>130</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Parameter>
-						<Name><![CDATA[rownumber]]></Name>
-						<Type><![CDATA[int]]></Type>
-					</Parameter>
-					<Parameter>
-						<Name><![CDATA[per]]></Name>
-						<Type><![CDATA[double]]></Type>
-					</Parameter>
-					<Body><![CDATA[String a = String.format("input!C%s", rownumber+1);
-main.excelFile.setFileName("per.xlsx");
-
-//writing to excel
-main.excelFile.setCellValue( per, a);
-main.excelFile.writeFile();]]></Body>
-				</Function>
-				<Function AccessType="default" StaticFunction="false">
-					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
-					<ReturnType><![CDATA[double]]></ReturnType>
-					<Id>1638270098653</Id>
-					<Name><![CDATA[scrambling_code]]></Name>
-					<X>590</X><Y>100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Parameter>
-						<Name><![CDATA[locx]]></Name>
-						<Type><![CDATA[double]]></Type>
-					</Parameter>
-					<Parameter>
-						<Name><![CDATA[locy]]></Name>
-						<Type><![CDATA[double]]></Type>
-					</Parameter>
-					<Body><![CDATA[double x1 = main.s1.getX()-this.getX();
-double x2 = this.getX() - (main.s1.getX()+main.s1.getWidth());
-double y1 = main.s1.getY()-this.getY();
-double y2 = this.getY() - (main.s1.getY()+main.s1.getHeight());
-
-double x11 = main.s2.getX()-this.getX();
-double x22 = this.getX() - (main.s2.getX()+main.s2.getWidth());
-double y11 = main.s2.getY()-this.getY();
-double y22 = this.getY() - (main.s2.getY()+main.s2.getHeight());
-
-double x111 = main.s3.getX()-this.getX();
-double x222 = this.getX() - (main.s3.getX()+main.s3.getWidth());
-double y111 = main.s3.getY()-this.getY();
-double y222 = this.getY() - (main.s3.getY()+main.s3.getHeight());
-
-double x1111 = main.s4.getX()-this.getX();
-double x2222 = this.getX() - (main.s4.getX()+main.s4.getWidth());
-double y1111 = main.s4.getY()-this.getY();
-double y2222 = this.getY() - (main.s4.getY()+main.s4.getHeight());
-
-double x11111 = main.s5.getX()-this.getX();
-double x22222 = this.getX() - (main.s5.getX()+main.s5.getWidth());
-double y11111 = main.s5.getY()-this.getY();
-double y22222 = this.getY() - (main.s5.getY()+main.s5.getHeight());
-
-//assign the scrambling code
-if(x1<=0 && x2<=0 && y1<=0 && y2<=0)
-	{
-		main.s_codes.put(this.id,"s1");	// GPS accuracy is between 0,1		
-	}
-else if(x11<=0 && x22<=0 && y11<=0 && y22<=0)
-	{
-		main.s_codes.put(this.id,"s2");	;//highest gps accuracy in this region
-	}
-else if(x111<=0 && x222<=0 && y111<=0 && y222<=0)
-	{
-		main.s_codes.put(this.id,"s3");	
-	}
-else if (x1111<=0 && x2222<=0 && y1111<=0 && y2222<=0)
-	{
-		main.s_codes.put(this.id,"s4");	
-	}
-else 
-	{
-		main.s_codes.put(this.id,"s5");	
-	}
-return 0;]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -6699,12 +6120,6 @@ return 0;]]></Body>
 			</ReplicationsProperties>
 		</ParamVariationExperiment>	
 	</Experiments>
-	<ModelResources>
-		<Resource>
-			<Path><![CDATA[per.xlsx]]></Path>
-			<ReferencedFromUserCode>false</ReferencedFromUserCode>
-		</Resource>
-	</ModelResources>
     <RequiredLibraryReference>
 		<LibraryName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></LibraryName>
 		<VersionMajor>1</VersionMajor>
